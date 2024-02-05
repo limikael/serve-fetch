@@ -1,0 +1,10 @@
+{
+  "name": "serve-fetch",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "serve-fetch": "src/serve-fetch-cli.js"
+  }
+}

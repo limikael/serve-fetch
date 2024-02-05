@@ -1,0 +1,13 @@
+{
+  "name": "simple",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node serve-fetch-simple.js"
+  },
+  "dependencies": {
+    "server-fetch": "link:../.."
+  }
+}

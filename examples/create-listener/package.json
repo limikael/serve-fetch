@@ -1,0 +1,13 @@
+{
+  "name": "create-listener",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "server-fetch": "link:../.."
+  },
+  "scripts": {
+    "start": "node serve-fetch-create-listener.js"
+  }
+}
