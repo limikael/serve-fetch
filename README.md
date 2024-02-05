@@ -30,4 +30,4 @@ serve-fetch --port 3000 handler.js
 
 ## References
 
-At the time of writing, I couldn't find a stand alone package that did what I needed. However, there are implementations as part of other packages, the [node-server](// https://github.com/honojs/node-server/) module for [Hono](https://hono.dev/) and the [WHATWG Node Generic Server Adapter](https://github.com/ardatan/whatwg-node/tree/master/packages/server). 
+At the time of writing, I couldn't find a stand alone package that did what I needed. However, there are implementations as part of other packages, the [node-server](https://github.com/honojs/node-server/) module for [Hono](https://hono.dev/) and the [WHATWG Node Generic Server Adapter](https://github.com/ardatan/whatwg-node/tree/master/packages/server). 
