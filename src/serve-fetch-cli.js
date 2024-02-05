@@ -3,6 +3,7 @@
 import http from "http";
 import {createNodeRequestListener} from "./main.js";
 import path from "path";
+import fs from "fs";
 
 let argv=process.argv.slice(2);
 let port=3000;
@@ -24,8 +25,11 @@ if (argv.length!=1) {
 	process.exit(1);
 }
 
-let modulePath=path.resolve(argv[0]);
-let handler=(await import(modulePath)).default;
+let importPath=argv[0];
+if (fs.existsSync(path.resolve(importPath)))
+	importPath=path.resolve(importPath);
+
+let handler=(await import(importPath)).default;
 let server=http.createServer(createNodeRequestListener(handler));
 
 server.listen(3000,(e)=>{
