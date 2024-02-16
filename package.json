@@ -1,6 +1,7 @@
 {
   "name": "serve-fetch",
-  "version": "1.0.1",
+  "scripts": {},
+  "version": "1.0.2",
   "main": "src/main.js",
   "type": "module",
   "license": "MIT",
