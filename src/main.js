@@ -41,6 +41,9 @@ export function createNodeRequestListener(handler) {
 		let request=requestFromNodeRequest(req);
 		handler(request)
 			.then(response=>{
+				if (!response)
+					response=new Response("Not Found.",{status: 404});
+
 				applyResponseToNodeResponse(response, res);
 			})
 			.catch(e=>{
