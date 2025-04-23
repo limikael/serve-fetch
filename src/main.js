@@ -47,7 +47,9 @@ export function createNodeRequestListener(handler) {
 				applyResponseToNodeResponse(response, res);
 			})
 			.catch(e=>{
-				res.writeHead(500);
+				if (!res.headersSent)
+					res.writeHead(500);
+
 				res.end(String(e));
 			})
 	});	
