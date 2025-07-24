@@ -8,7 +8,8 @@ import {Readable} from 'node:stream';
 
 export function requestFromNodeRequest(nodeRequest) {
 	let proto="http:";
-	if (nodeRequest.headers["x-forwarded-proto"]=="https:")
+	if (nodeRequest.headers["x-forwarded-proto"] &&
+			nodeRequest.headers["x-forwarded-proto"].includes("https"))
 		proto="https:";
 
 	let url=proto+nodeRequest.headers.host+nodeRequest.url;
